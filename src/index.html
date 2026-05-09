@@ -4,353 +4,426 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 3 - Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-neutral-950 text-white font-sans antialiased">
     <!-- Header / Navbar -->
-    <header>
-      <nav>
-        <a href="#">
-          <img src="../assets/icons/logo.svg" alt="Company Logo" />
+    <header class="w-full absolute top-0 left-0 z-50">
+      <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+        <a href="#" class="flex-shrink-0">
+          <img src="../assets/icons/logo.svg" alt="Company Logo" class="h-8" />
         </a>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#faq">FAQ</a></li>
+        <ul class="hidden md:flex items-center gap-8 text-neutral-300 font-medium">
+          <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+          <li><a href="#service" class="hover:text-white transition-colors">Service</a></li>
+          <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+          <li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
+          <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
         </ul>
-        <button>Let's Talk</button>
+        <button class="bg-brand hover:bg-brand-hover text-white px-6 py-2.5 rounded-full font-semibold transition-colors">Let's Talk</button>
       </nav>
     </header>
 
     <main>
       <!-- Hero Section -->
-      <section id="hero">
-        <div>
-          <h1>Your Tech Partner for Smarter Growth</h1>
-          <p>We deliver tailored IT solutions to help you scale with speed and confidence.</p>
-          <button>Let's Talk</button>
+      <section id="hero" class="pt-40 pb-20 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="flex flex-col items-start gap-6">
+          <h1 class="text-5xl lg:text-[72px] font-bold leading-tight">
+            Your Tech Partner for <br/>
+            <span class="text-brand">Smarter Growth</span>
+          </h1>
+          <p class="text-lg text-neutral-400 max-w-lg">We deliver tailored IT solutions to help you scale with speed and confidence.</p>
+          <button class="bg-brand hover:bg-brand-hover text-white px-8 py-3.5 rounded-full font-semibold transition-colors shadow-lg shadow-brand/25 mt-2">Let's Talk</button>
         </div>
-        <div>
-          <img src="../assets/images/hero-illustration.png" alt="Hero 3D Illustration" />
+        <div class="flex justify-center lg:justify-end relative">
+          <!-- Added decorative glow behind illustration -->
+          <div class="absolute inset-0 bg-brand/20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
+          <img src="../assets/images/hero-illustration.png" alt="Hero 3D Illustration" class="w-full max-w-[600px] relative z-10" />
         </div>
       </section>
 
       <!-- Clients Section -->
-      <section id="clients">
-        <h2>Trusted by Global Innovators & Leading Brands</h2>
-        <ul>
-          <li><img src="../assets/images/logo-upwork.svg" alt="Upwork" /></li>
-          <li><img src="../assets/images/logo-zoom.svg" alt="Zoom" /></li>
-          <li><img src="../assets/images/logo-postman.svg" alt="Postman" /></li>
-          <li><img src="../assets/images/logo-databricks.svg" alt="Databricks" /></li>
-          <li><img src="../assets/images/logo-airbnb.svg" alt="Airbnb" /></li>
-          <li><img src="../assets/images/logo-dropbox.svg" alt="Dropbox" /></li>
-          <li><img src="../assets/images/logo-paypal.svg" alt="PayPal" /></li>
+      <section id="clients" class="py-16 max-w-7xl mx-auto px-6">
+        <h2 class="text-center text-neutral-300 font-medium mb-10 text-xl">Trusted by Global Innovators & Leading Brands</h2>
+        <ul class="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+          <li><img src="../assets/images/logo-upwork.svg" alt="Upwork" class="h-8 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
+          <li><img src="../assets/images/logo-zoom.svg" alt="Zoom" class="h-8 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
+          <li><img src="../assets/images/logo-postman.svg" alt="Postman" class="h-10 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
+          <li><img src="../assets/images/logo-databricks.svg" alt="Databricks" class="h-8 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
+          <li><img src="../assets/images/logo-airbnb.svg" alt="Airbnb" class="h-8 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
+          <li><img src="../assets/images/logo-dropbox.svg" alt="Dropbox" class="h-8 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
+          <li><img src="../assets/images/logo-paypal.svg" alt="PayPal" class="h-8 opacity-40 grayscale hover:opacity-100 transition-opacity" /></li>
         </ul>
       </section>
 
       <!-- Stats Section -->
-      <section id="stats">
-        <h2>End-to-End IT Solutions That Drive Results</h2>
-        <p>From strategy to execution, we deliver solutions that grow your business.</p>
-        <ul>
-          <li>
-            <h3>50+</h3>
-            <p>Projects Delivered</p>
+      <section id="stats" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">End-to-End IT Solutions That Drive Results</h2>
+        <p class="text-center text-neutral-400 mb-16 max-w-2xl mx-auto">From strategy to execution, we deliver solutions that grow your business.</p>
+        <ul class="flex flex-wrap justify-center gap-8 md:gap-12">
+          <li class="bg-neutral-900 border border-neutral-800 rounded-full w-56 h-56 flex flex-col justify-center items-center text-center p-6 shadow-xl transition-transform hover:-translate-y-2">
+            <h3 class="text-5xl font-bold text-brand mb-2">50+</h3>
+            <p class="text-neutral-300 font-medium">Projects Delivered</p>
           </li>
-          <li>
-            <h3>5+</h3>
-            <p>Years of Experience</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-full w-56 h-56 flex flex-col justify-center items-center text-center p-6 shadow-xl transition-transform hover:-translate-y-2">
+            <h3 class="text-5xl font-bold text-brand mb-2">5+</h3>
+            <p class="text-neutral-300 font-medium">Years of Experience</p>
           </li>
-          <li>
-            <h3>10+</h3>
-            <p>Industry Awards Won</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-full w-56 h-56 flex flex-col justify-center items-center text-center p-6 shadow-xl transition-transform hover:-translate-y-2">
+            <h3 class="text-5xl font-bold text-brand mb-2">10+</h3>
+            <p class="text-neutral-300 font-medium">Industry Awards Won</p>
           </li>
-          <li>
-            <h3>100%</h3>
-            <p>Client Satisfaction Rate</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-full w-56 h-56 flex flex-col justify-center items-center text-center p-6 shadow-xl transition-transform hover:-translate-y-2">
+            <h3 class="text-5xl font-bold text-brand mb-2">100%</h3>
+            <p class="text-neutral-300 font-medium">Client Satisfaction Rate</p>
           </li>
         </ul>
       </section>
 
       <!-- Process Section -->
-      <section id="process">
-        <h2>Our Process</h2>
-        <p>Clear steps. Smart execution. Results you can count on.</p>
-        <ol>
-          <li>
-            <h3>Discovery & Consultation</h3>
-            <p>Understand Your Needs & Goals</p>
+      <section id="process" class="py-24 max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Process</h2>
+        <p class="text-center text-neutral-400 mb-20">Clear steps. Smart execution. Results you can count on.</p>
+        <ol class="relative flex flex-col items-center">
+          <!-- The vertical timeline line -->
+          <div class="absolute w-[1px] bg-neutral-800 h-full left-6 md:left-1/2 md:-translate-x-1/2 top-0 z-0"></div>
+
+          <li class="relative w-full flex justify-end md:w-1/2 md:self-start md:pr-12 mb-8 pl-16 md:pl-0">
+            <div class="absolute left-6 md:left-auto md:-right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center font-bold shadow-[0_0_0_6px_#0A0D12] z-10 -ml-5 md:ml-0">1</div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl w-full">
+              <h3 class="text-lg font-bold text-white mb-2 flex justify-between items-center">Discovery & Consultation <span class="text-neutral-500">^</span></h3>
+              <p class="text-neutral-400 text-sm">Understand Your Needs & Goals</p>
+            </div>
           </li>
-          <li>
-            <h3>Planning & Strategy</h3>
-            <p>Build a Clear, Scalable Roadmap</p>
+
+          <li class="relative w-full flex justify-start md:w-1/2 md:self-end md:pl-12 mb-8 pl-16 md:pl-0">
+            <div class="absolute left-6 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center font-bold shadow-[0_0_0_6px_#0A0D12] z-10 -ml-5 md:ml-0">2</div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl w-full">
+              <h3 class="text-lg font-bold text-white mb-2 flex justify-between items-center">Planning & Strategy <span class="text-neutral-500">^</span></h3>
+              <p class="text-neutral-400 text-sm">Build a Clear, Scalable Roadmap</p>
+            </div>
           </li>
-          <li>
-            <h3>Design & Prototyping</h3>
-            <p>Craft UX That Converts</p>
+
+          <li class="relative w-full flex justify-end md:w-1/2 md:self-start md:pr-12 mb-8 pl-16 md:pl-0">
+            <div class="absolute left-6 md:left-auto md:-right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center font-bold shadow-[0_0_0_6px_#0A0D12] z-10 -ml-5 md:ml-0">3</div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl w-full">
+              <h3 class="text-lg font-bold text-white mb-2 flex justify-between items-center">Design & Prototyping <span class="text-neutral-500">^</span></h3>
+              <p class="text-neutral-400 text-sm">Craft UX That Converts</p>
+            </div>
           </li>
-          <li>
-            <h3>Development & Implementation</h3>
-            <p>Deliver With Speed & Precision</p>
+
+          <li class="relative w-full flex justify-start md:w-1/2 md:self-end md:pl-12 mb-8 pl-16 md:pl-0">
+            <div class="absolute left-6 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center font-bold shadow-[0_0_0_6px_#0A0D12] z-10 -ml-5 md:ml-0">4</div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl w-full">
+              <h3 class="text-lg font-bold text-white mb-2 flex justify-between items-center">Development & Implementation <span class="text-neutral-500">^</span></h3>
+              <p class="text-neutral-400 text-sm">Deliver With Speed & Precision</p>
+            </div>
           </li>
-          <li>
-            <h3>Testing & Optimization</h3>
-            <p>Ensure Quality at Every Step</p>
+
+          <li class="relative w-full flex justify-end md:w-1/2 md:self-start md:pr-12 mb-8 pl-16 md:pl-0">
+            <div class="absolute left-6 md:left-auto md:-right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center font-bold shadow-[0_0_0_6px_#0A0D12] z-10 -ml-5 md:ml-0">5</div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl w-full">
+              <h3 class="text-lg font-bold text-white mb-2 flex justify-between items-center">Testing & Optimization <span class="text-neutral-500">^</span></h3>
+              <p class="text-neutral-400 text-sm">Ensure Quality at Every Step</p>
+            </div>
           </li>
-          <li>
-            <h3>Launch & Growth</h3>
-            <p>Scale, Measure & Improve Continuously</p>
+
+          <li class="relative w-full flex justify-start md:w-1/2 md:self-end md:pl-12 mb-8 pl-16 md:pl-0">
+            <div class="absolute left-6 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center font-bold shadow-[0_0_0_6px_#0A0D12] z-10 -ml-5 md:ml-0">6</div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl w-full">
+              <h3 class="text-lg font-bold text-white mb-2 flex justify-between items-center">Launch & Growth <span class="text-neutral-500">^</span></h3>
+              <p class="text-neutral-400 text-sm">Scale, Measure & Improve Continuously</p>
+            </div>
           </li>
         </ol>
       </section>
 
       <!-- Services Section -->
-      <section id="services">
-        <h2>Smart IT Solutions That Grow With You</h2>
-        <p>Tailored tech to boost efficiency, security, and results.</p>
-        <ul>
-          <li>
-            <img src="../assets/icons/web-dev.png" alt="Web Development" />
-            <h3>Web Development</h3>
-            <p>Build fast, scalable, and SEO-friendly websites.</p>
+      <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Smart IT Solutions That Grow With You</h2>
+        <p class="text-center text-neutral-400 mb-16">Tailored tech to boost efficiency, security, and results.</p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/web-dev.png" alt="Web Development" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">Web Development</h3>
+            <p class="text-neutral-400">Build fast, scalable, and SEO-friendly websites.</p>
           </li>
-          <li>
-            <img src="../assets/icons/mobile-dev.png" alt="Mobile App Development" />
-            <h3>Mobile App Development</h3>
-            <p>Native & cross-platform apps tailored to user needs.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/mobile-dev.png" alt="Mobile App Development" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
+            <p class="text-neutral-400">Native & cross-platform apps tailored to user needs.</p>
           </li>
-          <li>
-            <img src="../assets/icons/ui-ux.png" alt="UI/UX Design" />
-            <h3>UI/UX Design</h3>
-            <p>Delight users with intuitive and beautiful interfaces</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/ui-ux.png" alt="UI/UX Design" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+            <p class="text-neutral-400">Delight users with intuitive and beautiful interfaces</p>
           </li>
-          <li>
-            <img src="../assets/icons/cloud.png" alt="Cloud Solutions" />
-            <h3>Cloud Solutions</h3>
-            <p>Secure and flexible cloud infrastructure for your growth.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/cloud.png" alt="Cloud Solutions" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">Cloud Solutions</h3>
+            <p class="text-neutral-400">Secure and flexible cloud infrastructure for your growth.</p>
           </li>
-          <li>
-            <img src="../assets/icons/software.png" alt="Software Development" />
-            <h3>Software Development</h3>
-            <p>Custom solutions built around your business logic.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/software.png" alt="Software Development" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">Software Development</h3>
+            <p class="text-neutral-400">Custom solutions built around your business logic.</p>
           </li>
-          <li>
-            <img src="../assets/icons/infrastructure.png" alt="IT Infrastructure" />
-            <h3>IT Infrastructure</h3>
-            <p>Scale your backend with reliable tech foundations.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/infrastructure.png" alt="IT Infrastructure" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">IT Infrastructure</h3>
+            <p class="text-neutral-400">Scale your backend with reliable tech foundations.</p>
           </li>
-          <li>
-            <img src="../assets/icons/cybersecurity.png" alt="Cybersecurity Services" />
-            <h3>Cybersecurity Services</h3>
-            <p>Stay protected with enterprise-grade security.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/cybersecurity.png" alt="Cybersecurity Services" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">Cybersecurity Services</h3>
+            <p class="text-neutral-400">Stay protected with enterprise-grade security.</p>
           </li>
-          <li>
-            <img src="../assets/icons/qa.png" alt="QA Solutions" />
-            <h3>QA Solutions</h3>
-            <p>Ensure performance with rigorous testing frameworks.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/qa.png" alt="QA Solutions" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">QA Solutions</h3>
+            <p class="text-neutral-400">Ensure performance with rigorous testing frameworks.</p>
           </li>
-          <li>
-            <img src="../assets/icons/consulting.png" alt="IT Consulting & Support" />
-            <h3>IT Consulting & Support</h3>
-            <p>Make smarter tech decisions with expert guidance.</p>
+          <li class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:bg-neutral-800 transition-colors group cursor-pointer">
+            <img src="../assets/icons/consulting.png" alt="IT Consulting & Support" class="w-16 h-16 mb-6 object-contain transition-transform group-hover:scale-110" />
+            <h3 class="text-xl font-bold mb-3">IT Consulting & Support</h3>
+            <p class="text-neutral-400">Make smarter tech decisions with expert guidance.</p>
           </li>
         </ul>
       </section>
 
       <!-- Industry Section -->
-      <section id="industry">
-        <h2>Built for Your Industry</h2>
-        <p>We've helped companies across industries launch smarter, faster, and more securely.</p>
-        <div>
-          <ul>
-            <li><button>Fintech</button></li>
-            <li><button>E-Commerce</button></li>
-            <li><button>Healthcare</button></li>
+      <section id="industry" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for Your Industry</h2>
+        <p class="text-neutral-400 mb-16 max-w-2xl">We've helped companies across industries launch smarter, faster, and more securely.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24">
+          <ul class="flex flex-col border-l-2 border-neutral-800">
+            <li class="relative -ml-[2px]">
+              <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-brand"></div>
+              <button class="w-full text-left pl-6 py-4 text-brand font-semibold text-lg">Fintech</button>
+            </li>
+            <li class="relative -ml-[2px]">
+              <button class="w-full text-left pl-6 py-4 text-neutral-500 hover:text-neutral-300 font-medium text-lg transition-colors">E-Commerce</button>
+            </li>
+            <li class="relative -ml-[2px]">
+              <button class="w-full text-left pl-6 py-4 text-neutral-500 hover:text-neutral-300 font-medium text-lg transition-colors">Healthcare</button>
+            </li>
           </ul>
-          <div>
-            <p>We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.</p>
-            <img src="../assets/images/industry-fintech.jpg" alt="Fintech Image" />
+          <div class="lg:col-span-2 flex flex-col gap-8">
+            <p class="text-xl text-neutral-300 leading-relaxed">We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.</p>
+            <img src="../assets/images/industry-fintech.jpg" alt="Fintech Image" class="w-full h-[400px] object-cover rounded-3xl" />
           </div>
         </div>
       </section>
 
       <!-- Projects Section -->
-      <section id="projects">
-        <h2>From Vision to Launch! Projects We're Proud Of</h2>
-        <p>Take a closer look at our recent work powering startups, enterprises, and everything in between.</p>
-        <ul>
-          <li>
-            <img src="../assets/images/Portofolio1.png" alt="Portofolio 1" />
-            <p>Landing Page</p>
-            <h3>Portofolio 1</h3>
+      <section id="projects" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">From Vision to Launch! Projects We're Proud Of</h2>
+        <p class="text-center text-neutral-400 mb-16 max-w-2xl mx-auto">Take a closer look at our recent work powering startups, enterprises, and everything in between.</p>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <li class="group cursor-pointer">
+            <div class="overflow-hidden rounded-3xl mb-6">
+              <img src="../assets/images/Portofolio1.png" alt="Portofolio 1" class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <p class="text-brand font-medium mb-2">Landing Page</p>
+            <h3 class="text-2xl font-bold transition-colors group-hover:text-brand">Portofolio 1</h3>
           </li>
-          <li>
-            <img src="../assets/images/Portofolio2 copy.png" alt="Portofolio 2" />
-            <p>Landing Page</p>
-            <h3>Portofolio 2</h3>
+          <li class="group cursor-pointer">
+            <div class="overflow-hidden rounded-3xl mb-6">
+              <img src="../assets/images/Portofolio2 copy.png" alt="Portofolio 2" class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <p class="text-brand font-medium mb-2">Landing Page</p>
+            <h3 class="text-2xl font-bold transition-colors group-hover:text-brand">Portofolio 2</h3>
           </li>
-          <li>
-            <img src="../assets/images/Portofolio3.png" alt="Portofolio 3" />
-            <p>Landing Page</p>
-            <h3>Portofolio 3</h3>
+          <li class="group cursor-pointer">
+            <div class="overflow-hidden rounded-3xl mb-6">
+              <img src="../assets/images/Portofolio3.png" alt="Portofolio 3" class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <p class="text-brand font-medium mb-2">Landing Page</p>
+            <h3 class="text-2xl font-bold transition-colors group-hover:text-brand">Portofolio 3</h3>
           </li>
         </ul>
       </section>
 
       <!-- Testimonials Section -->
-      <section id="testimonials">
-        <h2>What Partners Say About Working With Us</h2>
-        <p>Trusted voices. Real experiences. Proven results.</p>
-        <ul>
-          <li>
-            <div>
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"It was a game-changer for our project and turned it into reality efficiently and effectively."</p>
+      <section id="testimonials" class="py-24 bg-neutral-900 border-y border-neutral-800">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 max-w-7xl mx-auto px-6">What Partners Say About Working With Us</h2>
+        <p class="text-center text-neutral-400 mb-16 max-w-7xl mx-auto px-6">Trusted voices. Real experiences. Proven results.</p>
+        <ul class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <li class="relative bg-neutral-950 border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between h-full hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-8 left-8 text-brand text-[80px] font-serif leading-none h-10 w-12 flex items-end justify-center bg-neutral-900">”</div>
+            <div class="mb-8 pt-6">
+              <p class="text-yellow-500 mb-6 text-xl tracking-widest text-center">⭐⭐⭐⭐⭐</p>
+              <p class="text-lg text-neutral-300 leading-relaxed text-center">"It was a game-changer for our project and turned it into reality efficiently and effectively."</p>
             </div>
-            <div>
-              <img src="../assets/images/testimonial-1.png" alt="John Lee" />
-              <h4>John Lee</h4>
-              <p>Director at Innovate Corp</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch."</p>
-            </div>
-            <div>
-              <img src="../assets/images/testimonial-2.png" alt="Sarah Tan" />
-              <h4>Sarah Tan</h4>
-              <p>Product Manager at Finovate</p>
+            <div class="flex flex-col items-center gap-2">
+              <h4 class="font-bold text-lg">John Lee</h4>
+              <p class="text-brand text-sm mb-4">Director at Innovate Corp</p>
+              <img src="../assets/images/testimonial-1.png" alt="John Lee" class="w-14 h-14 rounded-full object-cover" />
             </div>
           </li>
-          <li>
-            <div>
-              <p>⭐⭐⭐⭐⭐</p>
-              <p>"The collaboration was seamless, and the results exceeded our expectations. Their expertise translated into a successful product."</p>
+          <li class="relative bg-neutral-950 border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between h-full hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-8 left-8 text-brand text-[80px] font-serif leading-none h-10 w-12 flex items-end justify-center bg-neutral-900">”</div>
+            <div class="mb-8 pt-6">
+              <p class="text-yellow-500 mb-6 text-xl tracking-widest text-center">⭐⭐⭐⭐⭐</p>
+              <p class="text-lg text-neutral-300 leading-relaxed text-center">"The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch."</p>
             </div>
-            <div>
-              <img src="../assets/images/testimonial-3.png" alt="Emily Chen" />
-              <h4>Emily Chen</h4>
-              <p>Marketing Head at TechWave</p>
+            <div class="flex flex-col items-center gap-2">
+              <h4 class="font-bold text-lg">Sarah Tan</h4>
+              <p class="text-brand text-sm mb-4">Product Manager at Finovate</p>
+              <img src="../assets/images/testimonial-2.png" alt="Sarah Tan" class="w-14 h-14 rounded-full object-cover" />
+            </div>
+          </li>
+          <li class="relative bg-neutral-950 border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between h-full hover:-translate-y-2 transition-transform">
+            <div class="absolute -top-8 left-8 text-brand text-[80px] font-serif leading-none h-10 w-12 flex items-end justify-center bg-neutral-900">”</div>
+            <div class="mb-8 pt-6">
+              <p class="text-yellow-500 mb-6 text-xl tracking-widest text-center">⭐⭐⭐⭐⭐</p>
+              <p class="text-lg text-neutral-300 leading-relaxed text-center">"The collaboration was seamless, and the results exceeded our expectations. Their expertise translated into a successful product."</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <h4 class="font-bold text-lg">Emily Chen</h4>
+              <p class="text-brand text-sm mb-4">Marketing Head at TechWave</p>
+              <img src="../assets/images/testimonial-3.png" alt="Emily Chen" class="w-14 h-14 rounded-full object-cover" />
             </div>
           </li>
         </ul>
       </section>
 
       <!-- FAQ Section -->
-      <section id="faq">
-        <div>
-          <h2>Need Help? Start Here.</h2>
-          <p>Everything you need to know — all in one place.</p>
+      <section id="faq" class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="flex flex-col gap-8">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Help? Start Here.</h2>
+            <p class="text-neutral-400">Everything you need to know — all in one place.</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer">
+              <summary class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+                What services do you offer?
+                <span class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+              </summary>
+              <p class="mt-4 text-neutral-400 leading-relaxed">We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
+            </details>
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer">
+              <summary class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+                How do I know if this is right for my business?
+                <span class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+              </summary>
+              <p class="mt-4 text-neutral-400 leading-relaxed">Answer here...</p>
+            </details>
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer">
+              <summary class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+                How much does a project cost?
+                <span class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+              </summary>
+              <p class="mt-4 text-neutral-400 leading-relaxed">Answer here...</p>
+            </details>
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer">
+              <summary class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+                How long does it take?
+                <span class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+              </summary>
+              <p class="mt-4 text-neutral-400 leading-relaxed">Answer here...</p>
+            </details>
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer">
+              <summary class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
+                Can I start with a small project first?
+                <span class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+              </summary>
+              <p class="mt-4 text-neutral-400 leading-relaxed">Answer here...</p>
+            </details>
+          </div>
         </div>
         <div>
-          <details>
-            <summary>What services do you offer?</summary>
-            <p>We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
-          </details>
-          <details>
-            <summary>How do I know if this is right for my business?</summary>
-            <p>Answer here...</p>
-          </details>
-          <details>
-            <summary>How much does a project cost?</summary>
-            <p>Answer here...</p>
-          </details>
-          <details>
-            <summary>How long does it take?</summary>
-            <p>Answer here...</p>
-          </details>
-          <details>
-            <summary>Can I start with a small project first?</summary>
-            <p>Answer here...</p>
-          </details>
-        </div>
-        <div>
-          <h3>Let's talk it through</h3>
-          <p>book a free consultation with our team.</p>
-          <img src="../assets/images/consultation.jpg" alt="Team meeting" />
-          <button>Free Consultation</button>
+          <div class="bg-brand rounded-[2rem] p-8 md:p-10 flex flex-col items-start h-fit sticky top-24 shadow-2xl shadow-brand/20">
+            <h3 class="text-3xl font-bold text-white mb-2">Let's talk it through</h3>
+            <p class="text-white/90 mb-8">book a free consultation with our team.</p>
+            <img src="../assets/images/consultation.jpg" alt="Team meeting" class="w-full h-48 object-cover rounded-2xl mb-8" />
+            <button class="w-full bg-white text-neutral-900 py-4 rounded-full font-bold transition-colors hover:bg-neutral-100">Free Consultation</button>
+          </div>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact">
-        <h2>Ready to Start? Let's Talk.</h2>
-        <p>Tell us what you need, and we'll get back to you soon.</p>
-        <form>
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" />
+      <section id="contact" class="py-24 max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Ready to Start? Let's Talk.</h2>
+        <p class="text-center text-neutral-400 mb-12">Tell us what you need, and we'll get back to you soon.</p>
+        <form class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="font-medium text-white text-sm">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full bg-transparent border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all placeholder:text-neutral-600" />
           </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" />
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-medium text-white text-sm">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full bg-transparent border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all placeholder:text-neutral-600" />
           </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+          <div class="flex flex-col gap-2">
+            <label for="message" class="font-medium text-white text-sm">Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" class="w-full bg-transparent border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-all min-h-[150px] resize-y placeholder:text-neutral-600"></textarea>
           </div>
-          <fieldset>
-            <legend>Services</legend>
-            <div>
-              <input type="checkbox" id="web-dev" name="services" value="web-dev" checked />
-              <label for="web-dev">Web Development</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cloud" name="services" value="cloud" />
-              <label for="cloud">Cloud Solutions</label>
-            </div>
-            <div>
-              <input type="checkbox" id="mobile-dev" name="services" value="mobile-dev" />
-              <label for="mobile-dev">Mobile App Development</label>
-            </div>
-            <div>
-              <input type="checkbox" id="software" name="services" value="software" />
-              <label for="software">Software Development</label>
-            </div>
-            <div>
-              <input type="checkbox" id="ui-ux" name="services" value="ui-ux" />
-              <label for="ui-ux">UI/UX Design</label>
-            </div>
-            <div>
-              <input type="checkbox" id="other" name="services" value="other" />
-              <label for="other">Other</label>
+          <fieldset class="border-none p-0 m-0 mt-4">
+            <legend class="font-medium text-white text-sm mb-4">Services</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="web-dev" name="services" value="web-dev" checked class="w-5 h-5 accent-brand cursor-pointer bg-transparent border-neutral-800 rounded" />
+                <label for="web-dev" class="text-neutral-300 cursor-pointer select-none text-sm">Web Development</label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="cloud" name="services" value="cloud" class="w-5 h-5 accent-brand cursor-pointer bg-transparent border-neutral-800 rounded" />
+                <label for="cloud" class="text-neutral-300 cursor-pointer select-none text-sm">Cloud Solutions</label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="mobile-dev" name="services" value="mobile-dev" class="w-5 h-5 accent-brand cursor-pointer bg-transparent border-neutral-800 rounded" />
+                <label for="mobile-dev" class="text-neutral-300 cursor-pointer select-none text-sm">Mobile App Development</label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="software" name="services" value="software" class="w-5 h-5 accent-brand cursor-pointer bg-transparent border-neutral-800 rounded" />
+                <label for="software" class="text-neutral-300 cursor-pointer select-none text-sm">Software Development</label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="ui-ux" name="services" value="ui-ux" class="w-5 h-5 accent-brand cursor-pointer bg-transparent border-neutral-800 rounded" />
+                <label for="ui-ux" class="text-neutral-300 cursor-pointer select-none text-sm">UI/UX Design</label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="other" name="services" value="other" class="w-5 h-5 accent-brand cursor-pointer bg-transparent border-neutral-800 rounded" />
+                <label for="other" class="text-neutral-300 cursor-pointer select-none text-sm">Other</label>
+              </div>
             </div>
           </fieldset>
-          <button type="submit">Send</button>
+          <button type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-full font-bold transition-colors mt-8 shadow-lg shadow-brand/20">Send</button>
         </form>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div>
-        <h2>LET'S DISCUSS YOUR IDEAS</h2>
-        <a href="#">
-          <img src="../assets/icons/logo.svg" alt="Company Logo" />
-        </a>
-      </div>
-      <hr />
-      <div>
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#faq">FAQ</a></li>
+    <footer class="pb-12 mt-12 max-w-7xl mx-auto px-6">
+      <div class="bg-neutral-900 rounded-[2rem] p-10 md:p-16 border border-neutral-800">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-md leading-tight">LET'S DISCUSS <br/> YOUR IDEAS</h2>
+          <a href="#">
+            <img src="../assets/icons/logo.svg" alt="Company Logo" class="h-8" />
+          </a>
+        </div>
+        <hr class="border-neutral-800 mb-8" />
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <nav>
+            <ul class="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-neutral-300 font-medium">
+              <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+              <li><a href="#service" class="hover:text-white transition-colors">Service</a></li>
+              <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+              <li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+            </ul>
+          </nav>
+          <ul class="flex items-center gap-4">
+            <li><a href="#" aria-label="Facebook" class="block p-2.5 bg-neutral-950 rounded-full hover:bg-neutral-800 border border-neutral-800 transition-colors"><img src="../assets/icons/facebook.svg" alt="Facebook" class="w-4 h-4" /></a></li>
+            <li><a href="#" aria-label="Instagram" class="block p-2.5 bg-neutral-950 rounded-full hover:bg-neutral-800 border border-neutral-800 transition-colors"><img src="../assets/icons/instagram.svg" alt="Instagram" class="w-4 h-4" /></a></li>
+            <li><a href="#" aria-label="LinkedIn" class="block p-2.5 bg-neutral-950 rounded-full hover:bg-neutral-800 border border-neutral-800 transition-colors"><img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="w-4 h-4" /></a></li>
+            <li><a href="#" aria-label="TikTok" class="block p-2.5 bg-neutral-950 rounded-full hover:bg-neutral-800 border border-neutral-800 transition-colors"><img src="../assets/icons/tiktok.svg" alt="TikTok" class="w-4 h-4" /></a></li>
           </ul>
-        </nav>
-        <ul>
-          <li><a href="#" aria-label="Facebook"><img src="../assets/icons/facebook.svg" alt="Facebook" /></a></li>
-          <li><a href="#" aria-label="Instagram"><img src="../assets/icons/instagram.svg" alt="Instagram" /></a></li>
-          <li><a href="#" aria-label="LinkedIn"><img src="../assets/icons/linkedin.svg" alt="LinkedIn" /></a></li>
-          <li><a href="#" aria-label="TikTok"><img src="../assets/icons/tiktok.svg" alt="TikTok" /></a></li>
-        </ul>
+        </div>
       </div>
     </footer>
   </body>
