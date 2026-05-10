@@ -21,37 +21,21 @@
         <a href="#" class="shrink-0">
           <img src="../assets/icons/logo.svg" alt="Company Logo" class="h-8" />
         </a>
-        <ul
-          class="hidden md:flex items-center gap-8 text-neutral-300 font-medium"
-        >
-          <li>
-            <a href="#about" class="hover:text-white transition-colors"
-              >About</a
-            >
-          </li>
-          <li>
-            <a href="#service" class="hover:text-white transition-colors"
-              >Service</a
-            >
-          </li>
-          <li>
-            <a href="#projects" class="hover:text-white transition-colors"
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a href="#testimonials" class="hover:text-white transition-colors"
-              >Testimonials</a
-            >
-          </li>
-          <li>
-            <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-          </li>
+        <ul class="hidden md:flex items-center gap-8 text-neutral-300 font-medium">
+          <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+          <li><a href="#service" class="hover:text-white transition-colors">Service</a></li>
+          <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+          <li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
+          <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
         </ul>
-        <button
-          class="bg-brand hover:bg-brand-hover text-white px-6 py-2.5 rounded-full font-semibold transition-colors"
-        >
+        <button class="hidden md:block bg-brand hover:bg-brand-hover text-white px-6 py-2.5 rounded-full font-semibold transition-colors">
           Let's Talk
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="md:hidden text-white p-2 focus:outline-none" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
         </button>
       </nav>
     </header>
@@ -692,87 +676,46 @@
               Everything you need to know — all in one place.
             </p>
           </div>
-          <div class="flex flex-col gap-4">
-            <details
-              class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer"
-            >
-              <summary
-                class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden"
-              >
+          <div class="flex flex-col">
+            <details class="group border-b border-neutral-800 py-6 cursor-pointer" open>
+              <summary class="font-bold text-lg md:text-xl list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
                 What services do you offer?
-                <span
-                  class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300"
-                  >+</span
-                >
+                <span class="text-3xl font-light text-neutral-400 group-open:hidden">+</span>
+                <span class="text-3xl font-light text-neutral-400 hidden group-open:block">-</span>
               </summary>
-              <p class="mt-4 text-neutral-400 leading-relaxed">
-                We provide custom web/app development, cloud solutions, UX/UI
-                design, and more.
-              </p>
+              <p class="mt-6 text-neutral-400 leading-relaxed">We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
             </details>
-            <details
-              class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer"
-            >
-              <summary
-                class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden"
-              >
+            <details class="group border-b border-neutral-800 py-6 cursor-pointer">
+              <summary class="font-bold text-lg md:text-xl list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
                 How do I know if this is right for my business?
-                <span
-                  class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300"
-                  >+</span
-                >
+                <span class="text-3xl font-light text-neutral-400 group-open:hidden">+</span>
+                <span class="text-3xl font-light text-neutral-400 hidden group-open:block">-</span>
               </summary>
-              <p class="mt-4 text-neutral-400 leading-relaxed">
-                Answer here...
-              </p>
+              <p class="mt-6 text-neutral-400 leading-relaxed">Book a free consult — we'll assess your goals and recommend the right approach.</p>
             </details>
-            <details
-              class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer"
-            >
-              <summary
-                class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden"
-              >
+            <details class="group border-b border-neutral-800 py-6 cursor-pointer">
+              <summary class="font-bold text-lg md:text-xl list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
                 How much does a project cost?
-                <span
-                  class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300"
-                  >+</span
-                >
+                <span class="text-3xl font-light text-neutral-400 group-open:hidden">+</span>
+                <span class="text-3xl font-light text-neutral-400 hidden group-open:block">-</span>
               </summary>
-              <p class="mt-4 text-neutral-400 leading-relaxed">
-                Answer here...
-              </p>
+              <p class="mt-6 text-neutral-400 leading-relaxed">Every project is different. Let's talk about your needs to get a tailored estimate.</p>
             </details>
-            <details
-              class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer"
-            >
-              <summary
-                class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden"
-              >
+            <details class="group border-b border-neutral-800 py-6 cursor-pointer">
+              <summary class="font-bold text-lg md:text-xl list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
                 How long does it take?
-                <span
-                  class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300"
-                  >+</span
-                >
+                <span class="text-3xl font-light text-neutral-400 group-open:hidden">+</span>
+                <span class="text-3xl font-light text-neutral-400 hidden group-open:block">-</span>
               </summary>
-              <p class="mt-4 text-neutral-400 leading-relaxed">
-                Answer here...
-              </p>
+              <p class="mt-6 text-neutral-400 leading-relaxed">Depends on scope — but we always prioritize quality and deadlines.</p>
             </details>
-            <details
-              class="group bg-neutral-900 border border-neutral-800 rounded-2xl p-6 cursor-pointer"
-            >
-              <summary
-                class="font-bold text-lg list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden"
-              >
+            <details class="group border-b border-neutral-800 py-6 cursor-pointer">
+              <summary class="font-bold text-lg md:text-xl list-none flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden">
                 Can I start with a small project first?
-                <span
-                  class="text-brand text-2xl group-open:rotate-45 transition-transform duration-300"
-                  >+</span
-                >
+                <span class="text-3xl font-light text-neutral-400 group-open:hidden">+</span>
+                <span class="text-3xl font-light text-neutral-400 hidden group-open:block">-</span>
               </summary>
-              <p class="mt-4 text-neutral-400 leading-relaxed">
-                Answer here...
-              </p>
+              <p class="mt-6 text-neutral-400 leading-relaxed">Absolutely. We often begin with MVPs or pilot projects.</p>
             </details>
           </div>
         </div>
@@ -1054,5 +997,87 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-neutral-950 z-60 hidden flex-col">
+      <div class="px-6 py-6 flex justify-between items-center">
+        <a href="#" class="shrink-0">
+          <img src="../assets/icons/logo.svg" alt="Company Logo" class="h-8" />
+        </a>
+        <button id="close-menu" class="text-white p-2 focus:outline-none" aria-label="Close Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="px-6 pt-8 pb-12 flex flex-col gap-8 h-full overflow-y-auto">
+        <ul class="flex flex-col gap-8 text-neutral-300 font-medium text-lg">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#service" class="hover:text-white">Service</a></li>
+          <li><a href="#projects" class="hover:text-white">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-white">Testimonials</a></li>
+          <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+        </ul>
+        <button class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-full font-bold transition-colors mt-auto">Let's Talk</button>
+      </div>
+    </div>
+
+    <!-- Success Modal Overlay -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 z-70 hidden items-center justify-center p-6">
+      <div class="bg-neutral-950 border border-neutral-800 rounded-3xl p-10 max-w-100 w-full flex flex-col items-center text-center shadow-2xl relative">
+        <div class="mb-6 -mt-4 relative">
+          <!-- Stand-in for the 3D envelope -->
+          <div class="w-24 h-24 bg-neutral-900 border border-neutral-800 rounded-2xl flex items-center justify-center text-5xl">✉️</div>
+          <div class="absolute -top-2 -right-2 bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold border-4 border-neutral-950">✓</div>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">Message Received!</h3>
+        <p class="text-neutral-400 leading-relaxed mb-8">Thanks for reaching out — we'll get back to you as soon as possible.</p>
+        <button id="close-success" class="w-full bg-brand hover:bg-brand-hover text-white py-3.5 rounded-full font-bold transition-colors">Back to Home</button>
+      </div>
+    </div>
+    <script>
+      // Mobile Menu Logic
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openMenuBtn = document.querySelector('button[aria-label="Open Menu"]');
+      const closeMenuBtn = document.getElementById('close-menu');
+
+      openMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      });
+
+      closeMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = '';
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // Form Success Modal Logic
+      const form = document.querySelector('form');
+      const successModal = document.getElementById('success-modal');
+      const closeSuccessBtn = document.getElementById('close-success');
+
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent page reload
+        successModal.classList.remove('hidden');
+        successModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeSuccessBtn?.addEventListener('click', () => {
+        successModal.classList.add('hidden');
+        successModal.classList.remove('flex');
+        document.body.style.overflow = '';
+        form.reset(); // Clear form fields
+      });
+    </script>
   </body>
 </html>
