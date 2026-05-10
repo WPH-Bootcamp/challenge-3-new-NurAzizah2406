@@ -20,3 +20,5 @@
 
   --font-sans: "Quicksand", sans-serif;
 }
+
+@custom-variant dark (&:is(.dark *));
